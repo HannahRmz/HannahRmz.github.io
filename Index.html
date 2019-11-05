@@ -1,10 +1,61 @@
 <html>
+
 <head>
+
 <title>Inserting Image</title>
+ <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
 </head>
+
 <body>
-<h1>Hello Welcome To My Page</h1>
-<p> This is a guessing game.
-<img src="file:///C:/Users/User/OneDrive/Documents/marble%20background.webp.jpg">
+
+<button type="button" onclick = "randomnumber()"> Play the Guessing Game</button>
+<h1 align="center"> Hello Welcome To My Page</h1>
+<div class="imgbox">
+    <img class="center-fit" src='https://www.muralswallpaper.com/app/uploads/deep-blue-clouded-marble-textures-plain-820x532.jpg'>
+</div>
+<script>
+function randomnumber(){
+number = (Math.floor(Math.random() * ((10 - 1) + 1)) + 1)
+
+theirnumber = prompt("Guess the number (1-10):");
+        
+	if (theirnumber == number) {
+        done = true;
+	}
+	else {
+		console.log("wrong")
+    }
+            
+ 	prompt("It was wrong, your number was:" + " " + number)
+}
+
+randomnumber()
+
+</script>
 </body>
+
 </html>
+
+
+
+
+
+
+
+
+
+
