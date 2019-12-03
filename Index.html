@@ -42,21 +42,40 @@ ctx.beginPath();
 //arc(x,y,r,sAngle,eAngle,counterclockwise);
 ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
 ctx.moveTo(110, 75);
+ctx.lineWidth = 10;
+ctx.stroke();
+ctx.fillStyle = "blue";
+ctx.fill();
+ctx.beginPath(),
 ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
 ctx.moveTo(65, 65);
+ctx.lineWidth = 5;
+ctx.stroke();
+ctx.fillStyle = "blue";
+ctx.fill();
+ctx.strokeStyle = "red";
+ctx.stroke();
+ctx.beginPath();
 ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
 ctx.moveTo(95, 65);
+ctx.stroke();
+ctx.fillStyle = "red";
+ctx.fill();
+ctx.beginPath();
 ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
 ctx.stroke();
+ctx.fillStyle = "red";
+ctx.fill();
 //Arm
 ctx.moveTo(10,45);
 ctx.lineTo(47,180);
-ctx.stroke();
+ctx.fillStyle = "red";
+ctx.fill();
 //Arm
 ctx.moveTo(120,190);
 ctx.lineTo(69,50);
 ctx.stroke();
-
+	  
 	</script>
   </canvas>
 	
