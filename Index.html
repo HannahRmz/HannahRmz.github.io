@@ -35,20 +35,26 @@ body {
 	<a href="MaptoPlan.html">Come to a cool place!</a></H2>
  <canvas id="canvas" width="400" height="300">
   <script>
-  var canvas = document.getElementById('canvas');
+ var canvas = document.getElementById('canvas');
 var ctx = canvas.getContext('2d');
+var x = canvas.width/75;
+var y = canvas.height-75;
+var dx = 2;
+var dy = -2;
+
+function drawBall() {
 
 ctx.beginPath();
 //arc(x,y,r,sAngle,eAngle,counterclockwise);
-ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+ctx.arc(x, y, 50, 0, Math.PI * 2, true); // Outer circle
 ctx.moveTo(110, 75);
 ctx.lineWidth = 10;
 ctx.stroke();
 ctx.fillStyle = "blue";
 ctx.fill();
 ctx.beginPath(),
-ctx.arc(75, 75, 35, 0, Math.PI, false); // Mouth (clockwise)
-ctx.moveTo(65, 65);
+ctx.arc(x, y, 35, 0, Math.PI, false); // Mouth (clockwise)
+ctx.moveTo(x, y);
 ctx.lineWidth = 5;
 ctx.stroke();
 ctx.fillStyle = "blue";
@@ -64,17 +70,32 @@ ctx.fill();
 ctx.beginPath();
 ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
 ctx.stroke();
-ctx.fillStyle = "red";
 ctx.fill();
 //Arm
-ctx.moveTo(10,45);
-ctx.lineTo(47,180);
-ctx.fillStyle = "red";
+ctx.moveTo(x+6,y+9);
+ctx.lineTo(x+6,y+9);
 ctx.fill();
 //Arm
 ctx.moveTo(120,190);
-ctx.lineTo(69,50);
+ctx.lineTo(69,70);
 ctx.stroke();
+}
+
+//animate
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBall();
+    x += dx;
+    y += dy;
+}
+// register event handlers
+window.onclick = start;
+
+function start() {
+var x = canvas.width/75;
+var y = canvas.height-75; 
+setInterval(draw, 10);
+}
 	  
 	</script>
   </canvas>
