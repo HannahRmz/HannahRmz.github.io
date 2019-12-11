@@ -5,7 +5,6 @@ body{
 }
 .color-box {
 float:center; background-color:#FFFFFF; width: 300px; height: 100px;}
-
 </style>
 <title>New Games</title>
 
@@ -40,26 +39,27 @@ ctx.arc(x, y, 50, 0, Math.PI * 2, true); // Outer circle
 ctx.moveTo(110, 75);
 ctx.lineWidth = 10;
 ctx.stroke();
-ctx.fillStyle = "blue";
+ctx.fillStyle = "black";
 ctx.fill();
 ctx.beginPath(),
 ctx.arc(x, y, 35, 0, Math.PI, false); // Mouth (clockwise)
 ctx.moveTo(x, y);
 ctx.lineWidth = 5;
 ctx.stroke();
-ctx.fillStyle = "blue";
+ctx.fillStyle = "black";
 ctx.fill();
-ctx.strokeStyle = "red";
+ctx.strokeStyle = "white";
 ctx.stroke();
 ctx.beginPath();
 ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
 ctx.moveTo(95, 65);
 ctx.stroke();
-ctx.fillStyle = "red";
+ctx.fillStyle = "white";
 ctx.fill();
 ctx.beginPath();
 ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
 ctx.stroke();
+ctx.fillStyle = "white";
 ctx.fill();
 //Arm
 ctx.moveTo(x+6,y+9);
