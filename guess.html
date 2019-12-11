@@ -1,10 +1,14 @@
 <html>
+<style>
+body{
+	background-image:url('https://i.pinimg.com/564x/88/5f/85/885f853e1fb764fe84c21fb197430c29.jpg');
+}
+</style>
 <h1 align="center"> Hello Welcome To The Guessing Game</h1>
 <button type="button" onclick = "randomnumber()"> Play the Guessing Game</button>
 <script>
 function randomnumber(){
 number = (Math.floor(Math.random() * ((10 - 1) + 1)) + 1)
-
 theirnumber = prompt("Guess the number (1-10):");
         
 	if (theirnumber == number) {
@@ -16,8 +20,6 @@ theirnumber = prompt("Guess the number (1-10):");
             
  	prompt("It was wrong, your number was:" + " " + number)
 }
-
 randomnumber()
-
 </script>
 <html>
