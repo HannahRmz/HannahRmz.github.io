@@ -1,11 +1,23 @@
 <html>
-<title>New Games</title>
 <style>
 body{
-	background-image:url('https://www.larutadelsorigens.cat/filelook/full/133/1331582/nature-wallpaper-for-desktop-full-size-free-download.jpg');
+	background-image:url('https://i.pinimg.com/564x/cc/9e/b9/cc9eb9f23e9ec7721690abaaad851370.jpg');
 }
+.color-box {
+float:center; background-color:#FFFFFF; width: 300px; height: 100px;}
+
 </style>
+<title>New Games</title>
+
+</head>
+
 <body>
+	<div class = "color-box"{
+		background-color:green;
+		width:300px;
+		height: 50px;
+	}
+
 	<p>New Javascript Games</p>
 
 	<a href="Color.html">Riddle Game</a><br>
@@ -21,9 +33,7 @@ var x = canvas.width/75;
 var y = canvas.height-75;
 var dx = 2;
 var dy = -2;
-
 function drawBall() {
-
 ctx.beginPath();
 //arc(x,y,r,sAngle,eAngle,counterclockwise);
 ctx.arc(x, y, 50, 0, Math.PI * 2, true); // Outer circle
@@ -60,7 +70,6 @@ ctx.moveTo(120,190);
 ctx.lineTo(69,70);
 ctx.stroke();
 }
-
 //animate
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -70,7 +79,6 @@ function draw() {
 }
 // register event handlers
 window.onclick = start;
-
 function start() {
 var x = canvas.width/75;
 var y = canvas.height-75; 
@@ -82,5 +90,7 @@ setInterval(draw, 10);
 	
 </body>
 
+</script>
 
+</head>
 </html>
